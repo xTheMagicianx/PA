@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Refaccionaria</h1>
+    <p class="lead">Proyecto final de la materia de Programación Avanzada I, hecho por Francisco González Rodríguez</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Ver catálogo de productos</h2>
+        <p>
+            Echa un vistazo a nuestra variedad de productos de primera mano...
+        </p>
+        <p><a class="btn btn-primary" onclick="cambiarPagina('productos')">Ir &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Proveedores</h2>
+        <p>Consulta la lista de proveedores autorizados en Refaccionaria</p>
+        <p><a class="btn btn-primary" onclick="cambiarPagina('proveedores')">Ir &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Clientes</h2>
+        <p>Consulta la lista de clientes registrados dentro de Refaccionaria</p>
+        <p><a class="btn btn-primary" onclick="cambiarPagina('clientes')">Ir &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Ventas</h2>
+        <p>Consulta la lista de ventas realizadas dentro del sistema de Refaccionaria</p>
+        <p><a class="btn btn-primary" onclick="cambiarPagina('ventas')">Ir &raquo;</a></p>
+    </div>
+</div>
+
+<script>
+    function cambiarPagina(pagina) {
+        switch (pagina) {
+            case "productos":
+                window.location.href = "https://localhost:44391/Productos";
+                break;
+            case "proveedores":
+                window.location.href = "https://localhost:44391/Proveedores";
+                break;
+            case "clientes":
+                window.location.href = "https://localhost:44391/Clientes";
+                break;
+            case "ventas":
+                window.location.href = "https://localhost:44391/Ventas";
+                break;
+            default:
+                window.location.href = "https://localhost:44391/";
+                break;
+        }
+    }
+</script>
